@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Rotation</title>
+            <script>
+            function capital()
+            {
+                let words=document.getElementById("cap").value.toString();
+                let separate=words.toLowerCase().split(' ');
+                for(let i=0;i<separate.length;i++)
+                {
+                    separate[i]=separate[i].charAt(0).toUpperCase() + separate[i].substring(1);
+                }
+                document.write(separate.join(' '));
+            }
+            </script>
+            
+    </head>
+    <body>
+        <center>
+            <form>
+                Enter here: <input type="text" id="cap"/>
+                <input class="m1" type="button" onClick="capital()" value="Click"/>
+            </form>
+        
+        </center>
+    </body>
+</html>
