@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Current date and time</title>
+        <script>
+            function curr()
+            {
+                let today = new Date();
+                let day = today.getDay();
+                let daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+                
+                let hour = today.getHours();
+                let minute = today.getMinutes();
+                let second = today.getSeconds();
 
+                hour = today.getHours();
+                if (hour == 0)
+                {
+                    hour = 12 + " AM";
+                } 
+                else if (hour>12)
+                {
+                    hour = hour - 12 + " PM";
+                }
+                else
+                {
+                    hour = hour + " AM";
+                }
+                    
+                
+                
+               document.write("12 hours format : ");
+               document.write("current day = " +daylist[day]+" "+" || "+"current time = "+hour+ " : " + minute + " : " + second+" <br/> ");
+               document.write("24 hours format : ");
+               document.write(daylist[day] +" || "+today.getHours() +" : " +minute+" : " +second+"  ");
+                
+            }
+            
+        </script>
+    </head>
+    <body>
+       
+        <h1 style="color: #820000;">Current date and time</h1>
+        <button type="button" onclick="curr()">Click to know the time</button>
+        <h2 id="res"></h2>
+        
+           
+    </body>
+</html>
