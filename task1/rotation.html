@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Rotation</title>
+            <script>
+            function fun()
+            {
+                str=document.getElementById("rotate").value.toString();
+                var len = str.length;
+                var j = len - 1;
+                for (var i = 0; i < len; i++) 
+                {
+                    var last = str[j];
+                    str = str.slice(0, -1);
+                    str = last+str;
+                    document.write(str+" ");
+                }
+                //document.write(str);
+            }
+            </script>
+            
+    </head>
+    <body>
+        <center>
+            <form>
+                Enter the sentence: <input type="text" id="rotate"/>
+                <input class="m1" type="button" onClick="fun()" value="Click here"/>
+            </form>
+        
+        </center>
+    </body>
+</html>
