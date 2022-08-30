@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Days left until next christmas</title>
+        <script>
+            function findout()
+            {
+                let today=new Date();
+                let christmasYear=today.getFullYear();
+                if(today.getMonth()==11 && today.getDate()>25)
+                {
+                    christmasYear=christmasYear+1;
+                }
+                let christmasDate=new Date(christmasYear,11,25);
+                let daymilisecond=1000*60*60*24;
+                let remainingdate=Math.ceil((christmasDate.getTime()-today.getTime()) / (daymilisecond));
+                document.getElementById("check").innerHTML=(remainingdate);
+            }
+            
+        </script>
+        <style>
+            .c1{
+                color: #16213E;
+                margin-top: 50px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1  class="c1">To Know the no of days left until next christmas</h1>
+        <center><button type="button" class="btn btn-outline-primary" onclick="findout()">Click here</button></center>
+        <h2  class="text-center" id="check"></h2>
+    </body>
+</html>
