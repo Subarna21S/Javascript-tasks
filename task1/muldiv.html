@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form</title>
+    <script>
+    function multiplyBy()
+    {
+        num1 = document.getElementById("firstnum").value;
+        num2 = document.getElementById("secondnum").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+    }
+
+    function divisionBy() 
+    { 
+        num1 = document.getElementById("firstnum").value;
+        num2 = document.getElementById("secondnum").value;
+        document.getElementById("result").innerHTML = num1 / num2;
+    }
+    </script>
+    <style>
+        .m1
+        {
+            color: aqua;
+            background-color: black;
+        }
+        .m2
+        {
+            color: aqua;
+            background-color: black;
+        }
+    </style>
+    
+</head>
+    <body>
+        <center>
+            <form>
+            num 1 : <input type="text" id="firstnum"/>
+            <br><br>
+            num 2 : <input type="text" id="secondnum"/>
+            <br><br>
+            <input class="m1" type="button" onClick="multiplyBy()" value="Multiply"/>
+            <input class="m2" type="button" onClick="divisionBy()" value="Division"/>
+            </form>
+            <p>
+                The Result is : <span id = "result"></span>
+            </p>
+    </center>
+    </body>
+</html>
